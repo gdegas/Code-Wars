@@ -1,10 +1,11 @@
 
-let friendsArray = ['boob', 'mange', 'lets', 'googgber']
+let string = 'Hello man'
+let string2 = 'hello there.'
 
-function friend(friends) {
-  return friends.filter(function(friend) {
-    return friend.length === 4
-  })
+function reverse(input) {
+  const split = input.split(' ').reverse().join(' ')
+  return split
 }
 
-console.log(friend(friendsArray))
+console.log(reverse(string))
+console.log(reverse(string2))
