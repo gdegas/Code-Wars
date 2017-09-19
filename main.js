@@ -9,3 +9,15 @@ function reverse(input) {
 
 console.log(reverse(string))
 console.log(reverse(string2))
+
+let arrayOfSheep = [true, true, true, false]
+
+function arrayOfSheep(array) {
+  let count = 0
+    for(let i = 0; i < array.length; i++) {
+      if(array[i] === true) {
+        count++
+      }
+    }
+  return count
+}
