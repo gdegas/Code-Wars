@@ -54,7 +54,7 @@ function duplicateEncode(word){
       duplicateLetter[lowerCaseLetter] = 1
     }
   }
-  
+
   for(let i = 0; i < arrayWord.length; i++) {
     if(duplicateLetter[arrayWord[i].toLowerCase()] > 1) {
       newString += ')'
@@ -63,4 +63,14 @@ function duplicateEncode(word){
     }
   }
   return newString
+}
+
+// ## ISSUE 4
+
+function reverseWords(str) {
+  const arrayWords = str.split(' ')
+  const reverseArray = arrayWords.map(function(word) {
+    return word.split('').reverse().join('')
+  })
+  return reverseArray.join(' ')
 }
