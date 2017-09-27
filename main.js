@@ -74,3 +74,19 @@ function reverseWords(str) {
   })
   return reverseArray.join(' ')
 }
+
+// ## ISSUE 5
+
+const seniors = [[45, 12],[55,21],[19, -2],[104, 20]]
+
+function openOrSenior(data){
+  let seniorArray = []
+  for (let i = 0; i < data.length; i++) {
+      if (data[i][0] >= 55 && data[i][1] > 7){
+        seniorArray.push('Senior')
+    } else {
+        seniorArray.push('Open')
+    }
+  }
+  return seniorArray
+}
