@@ -90,3 +90,13 @@ function openOrSenior(data){
   }
   return seniorArray
 }
+
+// ## ISSUE 6
+
+function descendingOrder(n){
+
+  const arrayNum = n.toString().split('').sort((a, b) => b - a)
+  const descString = arrayNum.join('')
+
+  return +descString
+}
