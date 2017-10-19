@@ -112,3 +112,40 @@ function sequenceSum(begin, end, step) {
     }
   return count
 }
+
+// ## ISSUE 8
+
+
+function getCharNumber(string1, string2) {
+  let count1 = 0
+  let count2 = 0
+  let str1 = string1.toUpperCase()
+  let str2 = string2.toUpperCase()
+  for (let i = 0; i < str1.length; i++) {
+    if(!string1) {
+      string1 = ""
+    }
+    else {
+      count1 += str1.charCodeAt(i)
+    }
+  }
+  for (let i = 0; i <str2.length; i++) {
+    if (!string2) {
+      string2 = ""
+    }
+    else {
+      count2 += str2.charCodeAt(i)
+    }
+  }
+  console.log('count1:' + count1, 'count2: ' + count2)
+  return count1 === count2
+}
+
+
+function reverse (str) {
+    if (str === "") {
+      return "";
+    } else {    
+        return reverse(str.substr(1)) + str.charAt(0);
+    }
+}
