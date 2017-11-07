@@ -145,7 +145,16 @@ function getCharNumber(string1, string2) {
 function reverse (str) {
     if (str === "") {
       return "";
-    } else {    
+    } else {
         return reverse(str.substr(1)) + str.charAt(0);
     }
+}
+
+// ISSUE # 9
+
+function palindrome(str) {
+  str = str.replace(/[\W_]+/g, '')
+  str = str.toLowerCase()
+  const reversedStr = str.split('').reverse().join('')
+  return str === reversedStr
 }
