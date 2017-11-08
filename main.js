@@ -158,3 +158,15 @@ function palindrome(str) {
   const reversedStr = str.split('').reverse().join('')
   return str === reversedStr
 }
+
+// ISSUE #10
+
+function findLongestWord(str) {
+  var longestWord = '';
+  var wordsArray = str.split(' ');
+  for (var i = 0; i < wordsArray.length; i++) {
+    if(wordsArray[i].length > longestWord.length) {
+      longestWord = wordsArray[i];
+    }
+  }
+  return longestWord.length;
