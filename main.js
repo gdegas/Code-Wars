@@ -170,3 +170,20 @@ function findLongestWord(str) {
     }
   }
   return longestWord.length;
+}
+
+// ISSUE #11
+
+function largestOfFour(arr) {
+  var outputArray = [];
+  arr.forEach(function(element) {
+    var largestNumber = 0;
+    for(var i = 0; i < element.length; i++) {
+      if(element[i] > largestNumber) {
+        largestNumber = element[i];
+      }
+    }
+    outputArray.push(largestNumber)
+  })
+  return outputArray
+}
