@@ -187,3 +187,18 @@ function largestOfFour(arr) {
   })
   return outputArray
 }
+
+// ISSUE #12
+
+function getIndexToIns(arr, num) {
+  var sorted = arr.sort(function(a, b) {
+    return a - b;
+  });
+  console.log('sortedArray: ', sorted)
+  for (var i = 0; i < sorted.length; i++) {
+    if (sorted[i] > num) {
+      return i;
+    }
+  }
+  return arr.length
+}
