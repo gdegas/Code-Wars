@@ -202,3 +202,12 @@ function getIndexToIns(arr, num) {
   }
   return arr.length
 }
+
+// ISSUE 13
+
+function destroyer(arr) {
+  var args1 = Array.from(arguments).slice(1);
+  var args2 = Array.prototype.slice.call(arguments)
+  console.log('from example:', args1)
+  console.log('Using slice and call; ',args2)
+}
