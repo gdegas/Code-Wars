@@ -211,3 +211,27 @@ function destroyer(arr) {
   console.log('from example:', args1)
   console.log('Using slice and call; ',args2)
 }
+
+// ISSUE 14
+
+function diffArray(arr1, arr2) {
+  var newArr = [];
+ // sort the array from smallest to largest number with reduce
+  if (arr1.length === 0) {
+    return arr2;
+  } else if (arr2.length === 0) {
+    return arr1;
+  } else {
+    for (var i = 0; i<arr1.length; i++) {
+      if(arr2.indexOf(arr1[i]) === -1) {
+        newArr.push(arr1[i]);
+      }
+      for(var j = 0; j<arr2.length; j++) {
+        if(arr1.indexOf(arr2[j]) === -1) {
+        newArr.push(arr2[j]);
+        }
+      }
+    }
+    return newArr;
+  }   
+}
