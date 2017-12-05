@@ -233,5 +233,38 @@ function diffArray(arr1, arr2) {
       }
     }
     return newArr;
-  }   
+  }
+}
+
+// Pluralsight capitalize first letter of each word in a sentence
+
+function titleCase(str) {
+  if (!str.length) {
+    return ''
+  }
+
+  str = str.toLowerCase()
+
+  const stayLower = [
+    "a",
+    "the",
+    "to",
+    "at",
+    "in",
+    "with",
+    "and",
+    "but",
+    "or"
+  ]
+  const wordsArray = str.split(' ');
+
+  for (var i = 1; i < wordsArray.length - 1; i++) {
+    if (!stayLower.includes(wordsArray[i]) || i === 0 || i === wordsArray.length -1) {
+      wordsArray[i] = capitalize(wordsArray[i])
+    }
+  }
+  function capitalize(word) {
+     return word.charAt(0).toUpperCase() + word.substr(1)
+  }
+  return wordsArray.join(' ')
 }
