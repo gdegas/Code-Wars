@@ -268,3 +268,30 @@ function titleCase(str) {
   }
   return wordsArray.join(' ')
 }
+
+/// ROMAN NUMERAL CONVERSION
+
+
+function convertToRoman(num) {
+  // create a array with number that correspond with the roman numerals of another array
+  var numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+
+  // create an array of roman numerals, in positions that correspond with our numbers array so that we can compare them
+  var romanNumeral = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+  var outputString = '';
+
+  // iterate through our numers array, check if a number is less than the argument given, if it is, add the corresponding indexed item from roman numeral array to the outputstring
+  for (var i = 0; i < numbers.length; i++) {
+    // if num is less than the current number we are on
+    while(numbers[i] <= num) {
+      // concat our output string with the roman numeral at the corresponding index
+      outputString += romanNumeral[i];
+      console.log(romanNumeral[i]);
+      num -= numbers[i];
+    }
+  }
+
+
+
+ return outputString;
+}
