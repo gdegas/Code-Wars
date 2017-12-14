@@ -295,3 +295,21 @@ function convertToRoman(num) {
 
  return outputString;
 }
+
+
+// WHERE ART THOU- FREE CODE CAMP ALGORITHM
+
+function whatIsInAName(collection, source) {
+  // convert properties from source object in an array
+  var sourceProps = Object.keys(source);
+ // filter out unwanted objects
+  return collection.filter(function(obj) {
+    // loop through the keys from source object
+    for (var i = 0; i < sourceProps.length; i++) {
+      // for each key in source, if our object doesn't have the key as a property or if the value of that property in our source object doesn't match that same value in our collection object, do not include it.
+      if(!obj.hasOwnProperty(sourceProps[i]) || source[sourceProps[i]] !== obj[sourceProps[i]]) {
+        return false;
+      }
+     }
+   return true;
+  });
