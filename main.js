@@ -351,4 +351,5 @@ function pairElement(str) {
 
   // return it as an array in an array
 
+  }
 }
