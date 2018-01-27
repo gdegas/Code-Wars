@@ -353,3 +353,17 @@ function pairElement(str) {
 
   }
 }
+
+// Freecodecamp missing letters algorithm
+
+function fearNotLetter(str) {
+  // get the char code value of each letter
+  for (var i = 0; i < str.length; i++) {
+    // get the ascii of the character
+    var codeValue = str.charCodeAt(i);
+    // for each value, if the next value's charcodeat number is greater than 1, console.log
+    if (codeValue !== (str.charCodeAt(0) + i)) {
+      return String.fromCharCode(codeValue - 1);
+    }
+  }
+}
