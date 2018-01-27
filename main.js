@@ -313,3 +313,42 @@ function whatIsInAName(collection, source) {
      }
    return true;
   });
+
+// DNA PARING CODE CAMP ALGORITHM
+
+
+function pairElement(str) {
+  // take each character
+  var characters = str.split('');
+  // find its pair
+  var twodArray = characters.map(function(character) {
+   switch(character) {
+     case 'A':
+         var pair1 = [];
+         pair1.push(character);
+         pair1.push('T');
+         return pair1;
+     case 'T':
+         var pair2 = [];
+         pair2.push(character);
+         pair2.push('A');
+         return pair2;
+     case 'C':
+         var pair3 = [];
+         pair3.push(character);
+         pair3.push('G');
+         return pair3;
+     case 'G':
+         var pair4 = [];
+         pair4.push(character);
+         pair4.push('C');
+         return pair4;
+     default:
+       console.log('no matching pairs!');
+   }
+  });
+  return twodArray;
+
+  // return it as an array in an array
+
+}
